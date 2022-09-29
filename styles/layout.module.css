@@ -1,0 +1,22 @@
+.main{
+    background-color: rgb(35, 31, 31);
+    color: white;
+}
+
+.main ul {
+   display: flex;
+}
+.main a {
+    display: inline-block   ;
+    color: white;
+    padding: 10px 20px;
+}
+
+
+.main a:hover,
+.main a:focus,
+.main a:active  {
+    background-color: aliceblue;
+    color: black;
+}
+

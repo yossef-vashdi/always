@@ -16,6 +16,9 @@ function Layout({ children }) {
           <li>
             <Link href="/contact-us">Contact us</Link>
           </li>
+          <li>
+            <Link href="/dummyjson">Dummy json API</Link>
+          </li>
         </ul>
       </nav>
       {children}

@@ -1,8 +1,9 @@
 import React from 'react';
+import style from '../../styles/dummyjson.module.css';
 
 function Dummyjson(props) {
   return (
-    <>
+    <div className={style.class}>
       <br /> <br />
       <h1>Description is needed here, to explain, and to style it</h1>
       <h3>
@@ -31,7 +32,7 @@ function Dummyjson(props) {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }
 

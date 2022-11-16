@@ -8,6 +8,8 @@
 }
 .main a {
     display: inline-block   ;
+    width: 100%;
+    height: 100%;
     color: white;
     padding: 10px 20px;
 }
@@ -19,4 +21,27 @@
     background-color: aliceblue;
     color: black;
 }
+.main ul div {
+    display: none;
+}
 
+
+@media screen and (max-width : 500px) {
+    .main ul div{
+        display: inline-block   ;
+        width: 100%;
+        height: 100%;
+        color: white;
+        padding: 10px 20px;
+    }
+    .main ul:not(:hover) li{
+        display: none;
+    }
+
+    .main ul {
+        display: flex;
+        flex-direction: column;
+        
+     }
+    
+}

@@ -10,6 +10,7 @@ export default function Home() {
     <div>
       <h1>Home</h1>
       <br />
+
       <p>the button is not active yet</p>
       <button onClick={button}> check DB status </button>
     </div>

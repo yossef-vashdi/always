@@ -7,9 +7,9 @@ function Dummyjson(props) {
       <br /> <br />
       <h1>Description is needed here, to explain, and to style it</h1>
       <h3>
-        SSR (server side rendering), data fetching and rendering in
-        the back-end. I sent a request to &quot
-        https://dummyjson.com/posts &quot Dummy json
+        {`SSR (server side rendering), data fetching and rendering in
+        the back-end. I sent a request to "https://dummyjson.com/posts"
+        Dummy json`}
         <br />
         to get data and present it
       </h3>

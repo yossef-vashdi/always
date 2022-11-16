@@ -7,6 +7,7 @@ function Layout({ children }) {
     <>
       <nav className={style.main}>
         <ul>
+          <div> Menu</div>
           <li>
             <Link href="/">Home</Link>
           </li>
@@ -15,6 +16,9 @@ function Layout({ children }) {
           </li>
           <li>
             <Link href="/contact-us">Contact us</Link>
+          </li>
+          <li>
+            <Link href="/fun/movies">Movies</Link>
           </li>
           <li>
             <Link href="/dummyjson">Dummy json API</Link>

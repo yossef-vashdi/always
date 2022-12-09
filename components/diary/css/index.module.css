@@ -1,0 +1,84 @@
+.diaryContainer{
+    /* max-width: 1000px; */
+  display: grid;
+  margin:calc(1vw + 5px) ;
+  gap: calc(2vw + 5px);
+  grid-template-columns:  2fr 1fr;
+
+
+ 
+  /* justify-content: stretch; */
+    /* margin: 10px auto 40px; */
+    color: rgb(255, 255, 255);
+}
+@media screen and (min-width: 870px){
+    .diaryContainer section form{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 15px;
+    }
+}
+@media screen and (max-width: 870px){
+    .diaryContainer{
+        display:flex;
+        flex-direction: column-reverse;
+        margin: 10px 7vw ;
+    }
+    
+}
+
+
+.diaryContainer section form {
+  
+    display:  flex;
+    flex-direction: column;
+    padding: 5px 10px;
+
+  
+ justify-content: center;
+  align-items: center;
+  
+  border: black solid 2px;  
+  border-radius: 5px;
+  background-color: rgb(42, 74, 102, 0.2);
+  color: rgb(255, 255, 255);
+    
+}
+.diaryContainer section form input, .diaryContainer section form textarea, .diaryContainer section form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 2px;
+    background-color: rgb(42, 74, 102, 0);
+    color: rgb(255, 255, 255);
+    resize: none;
+}
+
+.diaryContainer section form label {
+    margin-top: 10px;
+}
+
+.diaryContainer article{
+    border: rgb(12, 11, 11) solid 2px;
+    padding: 10px;
+    border-radius: 5px;
+    
+    color: rgb(255, 255, 255);
+   
+    margin: 10px 0;
+    background-color: rgb(42, 74, 102, 0.2);
+}
+
+.diaryContainer article div {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.diaryContainer article button {
+padding: 3px 10px;
+box-sizing: border-box;
+width: 120px;
+border-radius: 5px;
+
+}

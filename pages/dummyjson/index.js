@@ -4,6 +4,11 @@ import style from '../../styles/dummyjson.module.css';
 function Dummyjson(props) {
   return (
     <div className={style.class}>
+      <h1 style={{ backgroundColor: 'red' }}>
+        This section is not yet ready, Work in progress
+      </h1>
+      <hr />
+      <br />
       <br /> <br />
       <h1>Description is needed here, to explain, and to style it</h1>
       <h3>

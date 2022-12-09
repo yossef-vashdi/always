@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import style from '../styles/layout.module.css';
+import { BiNoEntry } from 'react-icons/bi';
 
 function Layout({ children }) {
   return (
@@ -12,19 +13,21 @@ function Layout({ children }) {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <Link href="/diary">Diary</Link>
           </li>
           <li>
-            <Link href="/contact-us">Contact us</Link>
+            <Link href="/about">About me</Link>
           </li>
+
           <li>
             <Link href="/fun/movies">Movies</Link>
           </li>
           <li>
-            <Link href="/dummyjson">Dummy json API</Link>
+            <Link href="/dummyjson">Dummy json API </Link>
           </li>
         </ul>
       </nav>
+
       {children}
     </>
   );

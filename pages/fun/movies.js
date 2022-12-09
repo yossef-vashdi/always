@@ -7,6 +7,11 @@ import MoviesComponent from '../../components/fun/moviesComponent';
 function Movies() {
   return (
     <>
+      <h1 style={{ backgroundColor: 'red' }}>
+        This section is not yet ready, Work in progress
+      </h1>
+      <hr />
+      <br />
       <FormMovie />
       <MoviesComponent />
     </>

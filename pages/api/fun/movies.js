@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   }
   if (req.method === 'POST') {
     const data1 = await readDB();
-    console.log('body is : ' + req.body);
+    // console.log('body is : ' + req.body);
     data1.unshift(req.body);
 
     const newList = await writeDB('./data/movies.json', data1);

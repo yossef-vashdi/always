@@ -4,9 +4,10 @@ import Note from '../../../models/diary';
 export default async function handler(req, res) {
   connect();
   if (req.method === 'GET') {
-    Note.find()
-      .sort({ createdAt: -1 })
-      .then((data) => res.status(200).json(data));
+    // Note.find()
+    //   .sort({ createdAt: -1 })
+    //   .then((data) => res.status(200).json(data));
+    res.status(200).json({ test: 'testing' });
   }
   if (req.method === 'POST') {
     const createNote = new Note(req.body);

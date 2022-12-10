@@ -1,11 +1,33 @@
 import { useRouter } from 'next/router';
 import React from 'react';
-const base_url =
-  process.env.NODE_ENV === 'development'
-    ? 'http://localhost:3000/'
-    : 'https://always-fawn.vercel.app/';
+// const base_url =
+//   process.env.NODE_ENV === 'development'
+//     ? 'http://localhost:3000/'
+//     : 'https://always-fawn.vercel.app/';
 
-const dbReq = async (method, item) => {
+// function makeFunc() {
+//   const name = 'Mozilla';
+//   function displayName() {
+//     console.log(name);
+//   }
+//   return displayName;
+// }
+
+// const myFunc = makeFunc();
+// myFunc();
+
+// adjusting cors issue
+// const headersCors = {
+//   headers: {
+//     'Content-Type': 'application/json',
+//     withCredentials: true,
+//     crossorigin: true,
+//     mode: 'no-cors',
+//   },
+// };
+
+const dbReq = async (method, item, url) => {
+  // console.log(location.origin);
   //   console.log('db func is active', typeof window.location.origin);\
   //   console.log(process.env.NODE_ENV);
   if (method === 'POST') return await postReq(item);
@@ -22,15 +44,21 @@ async function postReq(item) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
+      withCredentials: true,
+      crossorigin: true,
+      mode: 'no-cors',
     },
     body: JSON.stringify(item),
   };
-  const response = await fetch(`${base_url}/api/diaryapi`, opt);
+  const response = await fetch(
+    `${location.origin}/api/diaryapi`,
+    opt
+  );
   const data = await response.json();
   return data;
 }
 async function getReq(item) {
-  const response = await fetch(`${base_url}/api/diaryapi`);
+  const response = await fetch(`${location.origin}/api/diaryapi`);
   const data = await response.json();
   return data;
 }
@@ -43,7 +71,10 @@ async function deleteReq(item) {
     },
     body: JSON.stringify(item),
   };
-  const response = await fetch(`${base_url}/api/diaryapi`, opt);
+  const response = await fetch(
+    `${location.origin}/api/diaryapi`,
+    opt
+  );
   const data = await response.json();
   return data;
 }
@@ -56,7 +87,10 @@ async function patchReq(item) {
     },
     body: JSON.stringify(item),
   };
-  const response = await fetch(`${base_url}/api/diaryapi`, opt);
+  const response = await fetch(
+    `${location.origin}/api/diaryapi`,
+    opt
+  );
   const data = await response.json();
   return data;
 }

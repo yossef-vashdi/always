@@ -23,6 +23,7 @@ function DiaryComponent() {
   const callDB = async () => {
     const data = await dbReq('GET');
     setList(data);
+    setLoading(false);
   };
 
   const itemHandler = async (method, item) => {
@@ -38,7 +39,6 @@ function DiaryComponent() {
 
   useEffect(() => {
     callDB();
-    setLoading(false);
   }, []);
   return (
     <>

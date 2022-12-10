@@ -19,12 +19,12 @@ function Layout({ children }) {
             <Link href="/about">About me</Link>
           </li>
 
-          <li>
+          {/* <li>
             <Link href="/fun/movies">Movies</Link>
           </li>
           <li>
             <Link href="/dummyjson">Dummy json API </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
 

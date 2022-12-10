@@ -2,6 +2,12 @@
 
 learning and testing my skills, building next-app
 
+## .env.local file is needed
+
+add MONGODB_URI variable to it,
+// get URI from mongo db Atlas (registration for free, create User + Password)
+// google it :)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

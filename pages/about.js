@@ -1,10 +1,19 @@
 import React from 'react';
 import styles from '../styles/About.module.css';
 import heroImage from '../components/heroImage';
+import Head from 'next/head';
 
 function About() {
   return (
     <div className={styles.container}>
+      <Head>
+        <title>About me</title>
+        <meta
+          name="description"
+          content="About me, yossef Vashdi, at your service"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <h1>About me </h1>
       {heroImage('/man nature.jpg')}
       {/* <h2>

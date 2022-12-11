@@ -1,9 +1,18 @@
+import Head from 'next/head';
 import React from 'react';
 import style from '../../styles/dummyjson.module.css';
 
 function Dummyjson(props) {
   return (
     <div className={style.class}>
+      <Head>
+        <title> external API</title>
+        <meta
+          name="description"
+          content="use of external API and server-side-rendering"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <h1 style={{ backgroundColor: 'red' }}>
         This section is not yet ready, Work in progress
       </h1>

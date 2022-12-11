@@ -38,7 +38,11 @@ export default async function handler(req, res) {
     // console.log('patch request');
     Note.findOne({ _id: req.body._id })
       .then((item) =>
-        item.updateOne({ title: req.body.title, body: req.body.body })
+        item.updateOne({
+          title: req.body.title,
+          body: req.body.body,
+          readOnly: req.body.readOnly,
+        })
       )
       .then(() => {
         Note.find()

@@ -7,20 +7,30 @@ function DiaryForm({ submitForm, patch }) {
     patch && setMethod('PATCH');
   }, [patch]);
 
-  const [item, setItem] = useState({ title: '', body: '' });
+  const [item, setItem] = useState({
+    title: '',
+    body: '',
+    readOnly: false,
+  });
   const [method, setMethod] = useState('POST');
   const inputControl = (e) => {
-    setItem((prevState) => {
-      return { ...prevState, [e.target.name]: e.target.value };
-    });
+    if (e.target.name === 'readOnly') {
+      setItem((prevState) => {
+        return { ...prevState, [e.target.name]: e.target.checked };
+      });
+    } else
+      setItem((prevState) => {
+        return { ...prevState, [e.target.name]: e.target.value };
+      });
   };
   const clearForm = () => {
     setMethod('POST');
-    setItem({ title: '', body: '' });
+    setItem({ title: '', body: '', readOnly: false });
   };
 
   const submitControl = (e) => {
     e.preventDefault();
+    // console.log(item);
     if (item.title.trim() === '' || item.body.trim() === '') return;
     submitForm(method, item);
     clearForm();
@@ -47,6 +57,19 @@ function DiaryForm({ submitForm, patch }) {
           value={item.body}
           onChange={inputControl}
         ></textarea>
+
+        {process.env.NODE_ENV === 'development' && (
+          <div>
+            <label htmlFor="readOnly"> Read only </label>
+            <input
+              type="checkbox"
+              id="readOnly"
+              onChange={inputControl}
+              name="readOnly"
+              checked={item.readOnly}
+            />
+          </div>
+        )}
 
         {method === 'POST' ? (
           <button> Create </button>

@@ -27,7 +27,7 @@ import React from 'react';
 // };
 
 const dbReq = async (method, item, url) => {
-  // console.log(location.origin);
+  // console.log(item);
   //   console.log('db func is active', typeof window.location.origin);\
   //   console.log(process.env.NODE_ENV);
   if (method === 'POST') return await postReq(item);

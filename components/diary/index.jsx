@@ -24,6 +24,7 @@ function DiaryComponent() {
     const data = await dbReq('GET');
     setList(data);
     setLoading(false);
+    // console.log(data);
   };
 
   const itemHandler = async (method, item) => {
@@ -42,6 +43,18 @@ function DiaryComponent() {
   }, []);
   return (
     <>
+      {process.env.NODE_ENV === 'development' && (
+        <h1
+          style={{
+            color: 'red',
+            backgroundColor: 'black',
+            textAlign: 'center',
+            padding: '10px',
+          }}
+        >
+          In development
+        </h1>
+      )}
       {loading && <LoadingSpinner />}
       <main className={styles.diaryContainer}>
         <div>
